@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    padding: 15px;
+    margin: 15px auto;
+}
+
+#memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    border: 1px solid #efefef;
+    background-color: #dcdcdc;
+    padding: 15px;
+}
+
+.card {
+    border: 1px solid #68a8cd;
+    background-color: #cae5f5;
+    padding: 5px;
+    cursor: pointer;
+    transform: rotateY(-180deg); 
+    /*
+    meg lesz fordítva kártya, de nem lesz láthatatlan, csak annyi, hogy mondjuk egy jobbra mutató nyíl, balra fog mutatni ha az 
+    y tengelye körül elforgatjuk 180 fokkal!!!  
+    */
+}
+
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+}
+
+.rotate {
+    transition: all 0.5s linear;
+    transform: rotateY(0deg);
+}
+
+.rotate-back {
+    transition: all 0.5s linear;
+    transform: rotateY(-180deg);
+}
+
+#points-holder {
+    max-width: 800px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box {
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    height: 40px;
+    margin-right: -1px;
+    text-align: center;
+}
